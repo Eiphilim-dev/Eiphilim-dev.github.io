@@ -2,8 +2,6 @@
 
 A high-fidelity, interactive developer portfolio inspired by the sleek, geometric aesthetics of Persona 3 Reload and modern cyber-tactical interfaces.
 
-Developed for **Andrea Eduard Magri** — Systems Analyst & Frontend Architect.
-
 ---
 
 ## ⚡ Features
@@ -35,57 +33,6 @@ Developed for **Andrea Eduard Magri** — Systems Analyst & Frontend Architect.
 - **Language**: TypeScript 5
 - **Audio**: Web Audio API (Native browser synthesizer)
 - **Typography**: Archivo Black, Inter, JetBrains Mono
-
----
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-Ensure you have [Node.js](https://nodejs.org/) (version 18 or newer) installed.
-
-### Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/Eiphilim-dev/your-repo-name.git
-
-# Navigate to project directory
-cd your-repo-name
-
-# Install dependencies
-npm install
-```
-
-### Local Development
-
-```bash
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) in your browser.
-
-### Production Build
-
-```bash
-npm run build
-```
-
-The output will be generated in the `dist` directory, ready to be deployed to any static hosting provider.
-
-To test the production build locally:
-
-```bash
-npm run preview
-```
-
----
-
-## 🌐 Deployment to GitHub Pages
-
-1. In your GitHub repository, navigate to **Settings > Pages**.
-2. Under **Build and deployment > Source**, select **GitHub Actions** (or deploy the `dist` branch).
-3. The build uses relative asset paths (`base: './'`), so it works smoothly on custom domains or GitHub Pages subpaths (`https://<username>.github.io/<repo>/`).
 
 ---
 
