@@ -1,0 +1,38 @@
+{
+  "name": "andrea-magri-portfolio",
+  "private": true,
+  "version": "1.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port=3000 --host=0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview",
+    "clean": "rm -rf dist",
+    "lint": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@angular/common": "^21.2.14",
+    "@angular/compiler": "^21.2.14",
+    "@angular/core": "^21.2.14",
+    "@angular/forms": "^21.2.14",
+    "@angular/platform-browser": "^21.2.14",
+    "@angular/platform-browser-dynamic": "^21.2.14",
+    "@tailwindcss/vite": "^4.1.14",
+    "motion": "^12.23.24",
+    "rxjs": "^7.8.2",
+    "vite": "^6.2.3",
+    "zone.js": "^0.16.2"
+  },
+  "devDependencies": {
+    "@analogjs/vite-plugin-angular": "^2.5.2",
+    "@angular/build": "^21.2.12",
+    "@angular/compiler-cli": "^21.2.14",
+    "@types/node": "^22.14.0",
+    "autoprefixer": "^10.4.21",
+    "esbuild": "^0.25.0",
+    "tailwindcss": "^4.1.14",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.2",
+    "vite": "^6.2.3"
+  }
+}

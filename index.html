@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <title>Andreaeduard Magri // Full-Stack Developer, AI Engineer &amp; Java Backend</title>
+    <meta name="description" content="Portfolio di Andreaeduard Magri - Sviluppatore Full-Stack, AI Engineer e specialista Backend Java. Sempre pronto a imparare nuove tecnologie." />
+    <meta property="og:title" content="Andreaeduard Magri // Full-Stack Developer, AI Engineer &amp; Java Backend" />
+    <meta property="og:description" content="Portfolio di Andreaeduard Magri - Sviluppatore Full-Stack, AI Engineer e specialista Backend Java. Sempre pronto a imparare nuove tecnologie." />
+    <meta property="og:type" content="website" />
+    <script>
+      // Fix GitHub Pages subpaths and trailing slashes
+      (function() {
+        var path = window.location.pathname;
+        if (path && !path.endsWith('/') && !path.split('/').pop().includes('.')) {
+          window.location.replace(path + '/' + window.location.search + window.location.hash);
+        }
+      })();
+
+      // Diagnostic Global Error Catcher for GitHub Pages / Client
+      window.addEventListener('error', function(event) {
+        var targetEl = event.target || event.srcElement;
+        var isScriptTag = targetEl && targetEl.tagName === 'SCRIPT';
+        var isJsError = event.message && !targetEl;
+
+        // Only show boot error screen for actual script failures or JS exceptions
+        if (!isScriptTag && !isJsError && !event.message) {
+          console.warn('[System Warning] Non-critical asset load error:', targetEl);
+          return;
+        }
+
+        console.error('[System Boot Error]', event);
+        var subText = document.getElementById('init-status-sub');
+        var errBox = document.getElementById('init-error-details');
+
+        var messageText = '';
+        if (isScriptTag) {
+          var scriptUrl = targetEl.src || 'inline-script';
+          messageText = 'FAILED TO LOAD APPLICATION SCRIPT:\n' + scriptUrl + 
+            '\n\nPossible Cause: 404 Not Found (Base URL path mismatch on GitHub Pages).';
+        } else {
+          messageText = 'ERROR: ' + (event.message || 'Script execution failed');
+          if (event.filename) {
+            messageText += '\nSOURCE: ' + event.filename + ':' + event.lineno + ':' + event.colno;
+          }
+          if (event.error && event.error.stack) {
+            messageText += '\n\nSTACK TRACE:\n' + event.error.stack;
+          }
+        }
+
+        if (subText) {
+          subText.style.color = '#FF4D6D';
+          subText.textContent = isScriptTag ? 'BOOT_FAILURE: SCRIPT_404_NOT_FOUND' : 'BOOT_FAILURE: SCRIPT_EXCEPTION';
+        }
+        if (errBox) {
+          errBox.style.display = 'block';
+          errBox.textContent = messageText;
+        }
+      }, true);
+
+      window.addEventListener('unhandledrejection', function(event) {
+        console.error('SYSTEM_PROMISE_REJECTION:', event);
+        var subText = document.getElementById('init-status-sub');
+        var errBox = document.getElementById('init-error-details');
+        if (subText) {
+          subText.style.color = '#FF4D6D';
+          subText.textContent = 'PROMISE_REJECTION: ' + (event.reason && (event.reason.message || event.reason));
+        }
+        if (errBox) {
+          errBox.style.display = 'block';
+          errBox.textContent = 'REASON: ' + (event.reason && (event.reason.stack || event.reason.message || event.reason));
+        }
+      });
+    </script>
+  </head>
+  <body class="bg-brand-deep antialiased selection:bg-brand-cyan selection:text-brand-deep">
+    <app-root>
+      <!-- Initial Loading Screen (replaced automatically once Angular bootstraps) -->
+      <div id="system-init-box" style="background-color: #050B14; color: #00D1FF; height: 100vh; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; font-family: monospace; text-transform: uppercase; padding: 20px; box-sizing: border-box; text-align: center;">
+        <div style="font-size: 1.25rem; font-weight: 900; letter-spacing: 0.15em; margin-bottom: 0.5rem; text-shadow: 0 0 10px rgba(0,209,255,0.5);">
+          AZURE PROTOCOL // INITIALIZING
+        </div>
+        <div id="init-status-sub" style="font-size: 0.75rem; color: rgba(255,255,255,0.7); letter-spacing: 0.2em; margin-bottom: 12px; transition: color 0.3s ease;">
+          LOADING SYSTEM CORES...
+        </div>
+        <pre id="init-error-details" style="display: none; background: rgba(255,77,109,0.12); border: 1px solid #FF4D6D; color: #FF4D6D; padding: 12px; border-radius: 4px; font-size: 11px; max-width: 600px; text-align: left; white-space: pre-wrap; word-break: break-all; margin-top: 10px;"></pre>
+      </div>
+      <script>
+        // Watchdog: If after 5s Angular hasn't replaced app-root, give helpful diagnostic hint
+        setTimeout(function() {
+          var sub = document.getElementById('init-status-sub');
+          if (sub && sub.textContent.indexOf('LOADING') !== -1) {
+            sub.textContent = 'LOADING MODULES (Press F12 for browser console if stuck)...';
+          }
+        }, 5000);
+      </script>
+    </app-root>
+    <script type="module" src="./src/main.ts"></script>
+  </body>
+</html>
+

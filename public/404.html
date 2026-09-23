@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Andreaeduard Magri // Redirecting...</title>
+    <script>
+      // Automatically redirect to the root index.html preserving URL params/hashes
+      var currentLoc = window.location;
+      var repoName = currentLoc.pathname.split('/')[1] || '';
+      var target = currentLoc.origin + (repoName ? '/' + repoName + '/' : '/');
+      window.location.replace(target + currentLoc.hash);
+    </script>
+  </head>
+  <body style="background-color: #050B14; color: #00D1FF; font-family: monospace; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0;">
+    <div>REDIRECTING PROTOCOL // INITIALIZING STAGE...</div>
+  </body>
+</html>
